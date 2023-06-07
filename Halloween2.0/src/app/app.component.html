@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ticket Shop</title>
+  <link rel="stylesheet" href="app.component.css">
+</head>
+<body>
+  <header>
+    <h1>Ticket Shop</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><button><a (click)="scroll(ticket)">Tickets</a> </button></li>
+      <li><a href="#">Cart</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Welcome to our Ticket Shop!</h2>
+      <p>Explore our selection of tickets and find the perfect one for you.</p>
+    </section>
+
+    <section>
+      <h2>Some info</h2>
+      <p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+    </section>
+
+    <section>
+      <h2 #ticket>Upcoming Events</h2>
+      <div class="event">
+        <img src="/assets/halloween.avif" alt="avif">
+        <h3>halloween 2.0</h3>
+        <p>Datum: 28.10.2023</p>
+        <p>Location: Stadthalle Lübbecke</p>
+        <button (click)="openTicketPurchaseDialog('halloween2.0')">Buy Ticket</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Pasi</p>
+  </footer>
+</body>
+</html>

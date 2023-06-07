@@ -1,0 +1,25 @@
+<h2>Buy Ticket</h2>
+<form [formGroup]="ticketForm" (ngSubmit)="purchaseTicket()">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" formControlName="name">
+    <div *ngIf="ticketForm.get('name')?.invalid && ticketForm.get('name')?.touched" class="error">
+      Name is required.
+    </div>
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" formControlName="email">
+    <div *ngIf="ticketForm.get('email')?.invalid && ticketForm.get('email')?.touched" class="error">
+      Email is required and should be a valid email address.
+    </div>
+  </div>
+  <div>
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" formControlName="quantity">
+    <div *ngIf="ticketForm.get('quantity')?.invalid && ticketForm.get('quantity')?.touched" class="error">
+      Quantity is required.
+    </div>
+  </div>
+  <button type="submit" [disabled]="ticketForm.invalid">Buy</button>
+</form>
